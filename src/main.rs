@@ -2,6 +2,7 @@ use std::fs::File;
 
 pub mod day1;
 pub mod day2;
+mod day3;
 fn main() {
     let path = "rsc\\day1.txt";
     let count = day1::count_increases(File::open(path).unwrap());
@@ -14,4 +15,10 @@ fn main() {
     println!("day2 q1 is :{}", ans);
     let ans = day2::calculate_product_aim(File::open(path).unwrap());
     println!("day2 q2 is :{}", ans);
+
+    let path = "rsc\\day3.txt";
+    let ans = day3::calculate_power_consumption(File::open(path).unwrap());
+    println!("day3 q1 is :{}", ans);
+    let ans = day3::calculate_life_support(File::open(path).unwrap());
+    println!("day3 q2 is :{}", ans);
 }
